@@ -1,0 +1,12 @@
+.parking-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 3px solid blue;
+    background-color: gray;
+    min-height: 250px;
+    height: 500px;  /* REQUIRED: Items need a limit to know when to wrap */
+    gap: 2rem;
+    padding: 2rem;
+    margin-bottom: 3%;
+}

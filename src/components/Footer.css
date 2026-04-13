@@ -1,0 +1,21 @@
+.output-container {
+    min-height: 300px;
+    display: flex;
+
+}
+
+.entries-container {
+    text-align: left;
+    font-size: 1rem;
+    background-color: green;
+    width: 70%;
+    padding: 2rem;
+}
+
+.earnings-container {
+    border: 1px solid black;
+    background-color: pink;
+    font-size: 2rem;
+    width: 30%;
+
+}

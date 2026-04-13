@@ -1,0 +1,11 @@
+.entry-container {
+    color:white; 
+    display: flex;
+    gap: 2px;
+}
+
+p {
+    margin:0;
+    padding-bottom:0.5rem;
+    font-size:0.85rem;
+}
