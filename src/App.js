@@ -1,5 +1,5 @@
 import Header from './components/Header.js';
-import ParkingLot from './components/ParkingLot2.js';
+import ParkingLot from './components/ParkingLot.js';
 import Footer from './components/Footer.js';
 import './App.css';
 import { useState } from 'react';
