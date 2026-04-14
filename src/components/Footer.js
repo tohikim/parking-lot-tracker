@@ -6,15 +6,22 @@ import Earnings from './Earnings.js';
 function Footer(props) {
     return (
         <div className="output-container">
-            <div className="entries-container">
+            <table className="entries-container">
+                <tr>
+                    <th>Model:{' '}</th>
+                    <th>Color:{' '}</th>
+                    <th>Entry time:{' '}</th>
+                    <th>Exit time:{' '}</th>
+                    <th>Duration:{' '}</th>
+                </tr>
                 {props.exitedCars.map((exitedCar) => {
                     return (
-                        <Entry model={exitedCar.model} color={exitedCar.color} entryTime={exitedCar.entryTime} exitTime={exitedCar.exitTime} duration={exitedCar.duration} />
+                            <Entry model={exitedCar.model} color={exitedCar.color} entryTime={exitedCar.entryTime} exitTime={exitedCar.exitTime} duration={exitedCar.duration} />
                     );
                 })}
-            </div>
+            </table>
             <div className="earnings-container">
-                <Earnings totalEarnings={props.totalEarnings}/>
+                <Earnings totalEarnings={props.totalEarnings} />
             </div>
         </div>
     )

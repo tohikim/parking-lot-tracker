@@ -1,5 +1,6 @@
 import './Car.css';
 import { differenceInSeconds } from "date-fns";
+import { format } from "date-fns";
 
 function Car(props) {
     const handleClick = () => {
@@ -41,7 +42,7 @@ function Car(props) {
             </div>
             <div className="car-content">
                 <p>Entry time:{' '}</p>
-                <p>{props.entryTime.toISOString()}</p>
+                <p>{format(props.entryTime, 'yyyy-MM-dd HH:mm:ss')}</p>
             </div>
             <button className="button-two" onClick={handleClick}>EXIT</button>
         </div>
