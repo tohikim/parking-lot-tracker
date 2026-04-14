@@ -12,17 +12,17 @@ function Header(props) {
             entryTime: new Date(),
             _id: Math.floor(Math.random() * 1000)
         }
-        props.setParkedCars((prevState) => {
-            if (prevState.length < 9) {
+
+        if (props.parkedCars.length < 9) {
+            props.setParkedCars((prevState) => {
                 return [...prevState, parkedCar];
-            } else {
-                alert(`This parking lot is full!`);
-                return prevState;
-            }
-        });
-        setModel('default');
-        setColor('');
-    }
+            });
+            setModel('default');
+            setColor('');
+        } else {
+            alert(`This parking lot is full!`);
+        }
+    };
 
     const [model, setModel] = useState('default');
     const [color, setColor] = useState('');
