@@ -1,5 +1,7 @@
 .car-container {
-    background-color: black;
+    background-image: url("../assets/car-icon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
     border-radius: 15px;
     max-height: 130px;
     max-width: 350px;
