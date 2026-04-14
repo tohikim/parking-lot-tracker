@@ -8,11 +8,12 @@ import { useState } from 'react';
 function App() {
   const [parkedCars, setParkedCars] = useState([]);
   const [exitedCars, setExitedCars] = useState([]);
+  const [totalEarnings, setTotalEarnings] = useState(0);
   return (
     <div className="App">
       <Header setParkedCars={setParkedCars} />
-      <ParkingLot parkedCars={parkedCars} setParkedCars={setParkedCars} setExitedCars={setExitedCars} />
-      <Footer exitedCars={exitedCars}/>
+      <ParkingLot parkedCars={parkedCars} setParkedCars={setParkedCars} setExitedCars={setExitedCars} setTotalEarnings={setTotalEarnings}/>
+      <Footer exitedCars={exitedCars} setTotalEarnings={setTotalEarnings} totalEarnings={totalEarnings}/>
     </div>
   );
 }

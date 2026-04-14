@@ -29,31 +29,34 @@ function Header(props) {
 
     return (
         <div className="header-container">
-            <h3>Click to add car details!</h3>
-            <form onSubmit={handleOnSubmit}>
-                <label>
-                    Model: {' '}
-                    <select
-                        value={model}
-                        onChange={e => setModel(e.target.value)}>
-                        <option value="default"></option>
-                        {carModels.map((car) => {
-                            return (
-                                <option value={car.id}>{car.label}</option>
-                            );
-                        })}
-                    </select>
-                </label>
-                <label>
-                    Color: {' '}
-                    <textarea
-                        placeholder="Blue"
-                        value={color}
-                        onChange={e => setColor(e.target.value)}
-                    />
-                </label>
-                <button type="submit">ADD CAR</button>
-            </form>
+            <h1>PARKING LOT TRACKER</h1>
+            <div className="instruction">
+                <h3>Click to add car details!</h3>
+                <form onSubmit={handleOnSubmit}>
+                    <label>
+                        Model: {' '}
+                        <select
+                            value={model}
+                            onChange={e => setModel(e.target.value)}>
+                            <option value="default"></option>
+                            {carModels.map((car) => {
+                                return (
+                                    <option value={car.id}>{car.label}</option>
+                                );
+                            })}
+                        </select>
+                    </label>
+                    <label>
+                        Color: {' '}
+                        <textarea
+                            placeholder="Blue"
+                            value={color}
+                            onChange={e => setColor(e.target.value)}
+                        />
+                    </label>
+                    <button className="button-one" type="submit">ADD CAR</button>
+                </form>
+            </div>
         </div>
     )
 }

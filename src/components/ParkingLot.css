@@ -2,10 +2,11 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    border: 3px solid blue;
+    border: 10px dashed yellow;
+    border-radius: 25px;
     background-color: gray;
     min-height: 250px;
-    height: 500px;  /* REQUIRED: Items need a limit to know when to wrap */
+    height: 510px;  /* REQUIRED: Items need a limit to know when to wrap */
     gap: 2rem;
     padding: 2rem;
     margin-bottom: 3%;

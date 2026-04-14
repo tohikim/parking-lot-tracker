@@ -1,5 +1,7 @@
 import './Footer.css';
 import Entry from './Entry.js';
+import Earnings from './Earnings.js';
+
 
 function Footer(props) {
     return (
@@ -12,7 +14,7 @@ function Footer(props) {
                 })}
             </div>
             <div className="earnings-container">
-
+                <Earnings totalEarnings={props.totalEarnings}/>
             </div>
         </div>
     )

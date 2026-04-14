@@ -1,5 +1,5 @@
 import './Car.css';
-import { differenceInMinutes } from "date-fns";
+import { differenceInSeconds } from "date-fns";
 
 function Car(props) {
     const handleClick = () => {
@@ -11,15 +11,21 @@ function Car(props) {
             entryTime: props.entryTime,
             _id: props._id,
             exitTime: exitTime,
-            duration: differenceInMinutes(exitTime, props.entryTime)
+            duration: differenceInSeconds(exitTime, props.entryTime)
         }
 
         props.setExitedCars((prevState) => {
             return [...prevState, exitedCar];
         })
 
+        props.setTotalEarnings((prevState) => {
+            const currentRate = exitedCar.duration * 2;
+            const totalRate = prevState + currentRate;
+            return totalRate;
+        })
+
         props.setParkedCars((prevState) => {
-            const filteredArray = prevState.filter((parkedCar) => parkedCar._id !== props._id );
+            const filteredArray = prevState.filter((parkedCar) => parkedCar._id !== props._id);
             return filteredArray;
         })
     }
@@ -37,7 +43,7 @@ function Car(props) {
                 <p>Entry time:{' '}</p>
                 <p>{props.entryTime.toISOString()}</p>
             </div>
-            <button onClick={handleClick}>EXIT</button>
+            <button className="button-two" onClick={handleClick}>EXIT</button>
         </div>
     )
 }
