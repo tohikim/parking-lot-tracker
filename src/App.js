@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Header setParkedCars={setParkedCars} parkedCars={parkedCars}/>
       <ParkingLot parkedCars={parkedCars} setParkedCars={setParkedCars} setExitedCars={setExitedCars} setTotalEarnings={setTotalEarnings}/>
-      <Footer exitedCars={exitedCars} setTotalEarnings={setTotalEarnings} totalEarnings={totalEarnings}/>
+      <Footer exitedCars={exitedCars} setTotalEarnings={setTotalEarnings} totalEarnings={totalEarnings} setExitedCars={setExitedCars}/>
     </div>
   );
 }
