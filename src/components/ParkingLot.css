@@ -6,7 +6,7 @@
     border-radius: 25px;
     background-color: gray;
     min-height: 250px;
-    height: 510px;  /* REQUIRED: Items need a limit to know when to wrap */
+    height: 510px;
     gap: 2rem;
     padding: 2rem;
     margin-bottom: 3%;
