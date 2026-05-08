@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# 🚗 Parking Lot Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A real-time React application designed to manage vehicle entries, track durations, and calculate revenue for a parking facility.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🌟 Features
 
-### `npm start`
+- **Vehicle Entry:** Select a model and color to add a car to the lot.
+- **Capacity Control:** Built-in validation prevents adding more than **9 cars** at a time.
+- **Live Tracking:** Every parked car displays its specific entry timestamp.
+- **Automated Billing:** Upon exit, the app automatically calculates the stay duration in seconds.
+- **Revenue Dashboard:** Tracks total daily earnings based on a **$2 per second** rate.
+- **Activity Logs:** A detailed history table tracks every car that has left the lot.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+- **Framework:** React.js
+- **Time Utilities:** [date-fns](https://date-fns.org/)
+- **Styling:** CSS3 (Component-specific stylesheets)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🚀 Installation & Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To get this project running locally, follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1.  **Clone the repository:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    git clone https://github.com/tohikim/parking-lot-tracker
+    cd parking-lot-tracker
+    ```
 
-### `npm run eject`
+2.  **Install dependencies:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    npm install
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3.  **Ensure `date-fns` is installed:**
+    _(This project relies on date-fns for time logic)_
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ```bash
+    npm install date-fns
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4.  **Start the development server:**
+    ```bash
+    npm start
+    ```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🏗️ Project Structure & Logic
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Component Hierarchy
 
-### Code Splitting
+- **`App.js`**: The "Source of Truth." It manages the state for `parkedCars`, `exitedCars`, and `totalEarnings`.
+- **`Header.js`**: Handles the form input and prevents the lot from exceeding 9 spots.
+- **`ParkingLot.js`**: A container that renders the current fleet of cars.
+- **`Car.js`**: The core logic unit. When a car "Exits":
+  - It calculates the duration using `differenceInSeconds`.
+  - It updates the total earnings by multiplying duration by 2.
+  - It moves the car data from the active lot to the exit logs.
+- **`Footer.js`**: Displays the `Entry` log table and the `Earnings` summary.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Pricing Logic
 
-### Analyzing the Bundle Size
+The system uses a straightforward calculation for billing:
+$$\text{Total Fee} = (\text{Exit Time} - \text{Entry Time in Seconds}) \times \$2$$
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Developed by **Tohi Kim**
