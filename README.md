@@ -46,9 +46,7 @@ To get this project running locally, follow these steps:
     npm start
     ```
 
-## 🏗️ Project Structure & Logic
-
-### Component Hierarchy
+## 🏗️ Project Structure
 
 - **`App.js`**: The "Source of Truth." It manages the state for `parkedCars`, `exitedCars`, and `totalEarnings`.
 - **`Header.js`**: Handles the form input and prevents the lot from exceeding 9 spots.
@@ -58,11 +56,6 @@ To get this project running locally, follow these steps:
   - It updates the total earnings by multiplying duration by 2.
   - It moves the car data from the active lot to the exit logs.
 - **`Footer.js`**: Displays the `Entry` log table and the `Earnings` summary.
-
-### Pricing Logic
-
-The system uses a straightforward calculation for billing:
-$$\text{Total Fee} = (\text{Exit Time} - \text{Entry Time in Seconds}) \times \$2$$
 
 ---
 
