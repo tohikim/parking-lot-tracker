@@ -2,8 +2,6 @@
 
 A real-time React application designed to manage vehicle entries, track durations, and calculate revenue for a parking facility.
 
----
-
 ## 🌟 Features
 
 - **Vehicle Entry:** Select a model and color to add a car to the lot.
@@ -13,15 +11,11 @@ A real-time React application designed to manage vehicle entries, track duration
 - **Revenue Dashboard:** Tracks total daily earnings based on a **$2 per second** rate.
 - **Activity Logs:** A detailed history table tracks every car that has left the lot.
 
----
-
 ## 🛠️ Tech Stack
 
 - **Framework:** React.js
 - **Time Utilities:** [date-fns](https://date-fns.org/)
 - **Styling:** CSS3 (Component-specific stylesheets)
-
----
 
 ## 🚀 Installation & Setup
 
@@ -51,8 +45,6 @@ To get this project running locally, follow these steps:
     ```bash
     npm start
     ```
-
----
 
 ## 🏗️ Project Structure & Logic
 
