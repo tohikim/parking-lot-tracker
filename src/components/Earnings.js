@@ -4,7 +4,7 @@ function Earnings(props) {
       <h5 style={styles.h5}>DAY EARNINGS</h5>
       <p style={styles.p}>Seconds rate: $2</p>
       <div style={styles.totalEarnings}>
-        <p style={styles.p}>Today's earnings: $ </p>
+        <p style={styles.p}>Today's earnings: $</p>
         <p style={styles.p}>{props.totalEarnings}</p>
       </div>
     </div>
