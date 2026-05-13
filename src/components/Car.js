@@ -1,5 +1,6 @@
 import { differenceInSeconds } from "date-fns";
 import { format } from "date-fns";
+import car from "../assets/car-icon.png";
 
 function Car(props) {
   const handleClick = () => {
@@ -54,7 +55,7 @@ function Car(props) {
 
 const styles = {
   carContainer: {
-    backgroundImage: 'url("../assets/car-icon.png")',
+    backgroundImage: `url(${car}`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "contain",
     borderRadius: "15px",
