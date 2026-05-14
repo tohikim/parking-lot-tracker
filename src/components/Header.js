@@ -1,4 +1,3 @@
-import "./Header.css";
 import { useState } from "react";
 import { carModels } from "../constants/car-models";
 
