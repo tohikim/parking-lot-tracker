@@ -1,8 +1,11 @@
-# 🚗 Valet Dashboard
+# Valet Dashboard
 
 A real-time React application designed to manage vehicle entries, track durations, and calculate revenue for a parking facility.
 
-## 🌟 Features
+<img width="1180" height="673" alt="Screenshot 2026-05-15 at 17 53 26" src="https://github.com/user-attachments/assets/b7d9924e-89c3-4d15-88d9-b2e2f78c6477" />
+
+
+## Features
 
 - **Vehicle Entry:** Select a model and the owner's sirname to add a car to the lot.
 - **Capacity Control:** Built-in validation prevents adding more than **9 cars** at a time.
@@ -11,13 +14,13 @@ A real-time React application designed to manage vehicle entries, track duration
 - **Revenue Dashboard:** Tracks total daily earnings based on a **$2 per second** rate.
 - **Activity Logs:** A detailed history table tracks every car that has left the lot.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework:** React.js
 - **Time Utilities:** [date-fns](https://date-fns.org/)
-- **Styling:** CSS3 (Component-specific stylesheets)
+- **Styling:** Tailwind CSS
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 To get this project running locally, follow these steps:
 
@@ -46,7 +49,7 @@ To get this project running locally, follow these steps:
     npm start
     ```
 
-## 🏗️ Project Structure
+## Project Structure
 
 - **`App.js`**: The "Source of Truth." It manages the state for `parkedCars`, `exitedCars`, and `totalEarnings`.
 - **`Header.js`**: Handles the form input, prevents the lot from exceeding 6 spots, and displays the `Earnings` summary.
