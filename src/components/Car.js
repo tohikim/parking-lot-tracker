@@ -7,7 +7,7 @@ function Car(props) {
 
     const exitedCar = {
       model: props.model,
-      color: props.color,
+      sirname: props.sirname,
       entryTime: props.entryTime,
       _id: props._id,
       exitTime: exitTime,
@@ -32,42 +32,28 @@ function Car(props) {
     });
   };
   return (
-    <div className="bg-no-repeat bg-contain rounded-[15px] max-h-[130px] max-w-[350px] p-[1rem]">
-      <div style={styles.carContent}>
-        <p style={styles.p}>Model: </p>
-        <p style={styles.p}>{props.model}</p>
+    <div className="rounded-[15px] max-h-[130px] h-fit max-w-[40%] w-fit">
+      <div className="flex flex-row gap-[10px]">
+        <p className="m-0 pb-[0.3rem] text-amber-800">Model: {props.model}</p>
       </div>
-      <div style={styles.carContent}>
-        <p style={styles.p}>Color: </p>
-        <p style={styles.p}>{props.color}</p>
+      <div className="flex flex-row gap-[10px]">
+        <p className="m-0 pb-[0.3rem] text-amber-800">
+          Sirname: {props.sirname}
+        </p>
       </div>
-      <div style={styles.carContent}>
-        <p style={styles.p}>Entry time: </p>
-        <p style={styles.p}>{format(props.entryTime, "yyyy-MM-dd HH:mm:ss")}</p>
+      <div className="flex flex-row gap-[10px]">
+        <p className="m-0 pb-[0.3rem] text-amber-800">
+          Entry time: {format(props.entryTime, "PPpp")}
+        </p>
       </div>
-      <button style={styles.buttonTwo} onClick={handleClick}>
+      <button
+        className="p-[0.4rem] text-white bg-amber-800 rounded-[10px] w-full mb-[0.3rem]"
+        onClick={handleClick}
+      >
         CHECK OUT
       </button>
     </div>
   );
 }
-
-const styles = {
-  carContent: {
-    display: "flex",
-    flexDirection: "row",
-    gap: "10px",
-  },
-
-  p: {
-    margin: 0,
-    paddingBottom: "0.5rem",
-    color: "white",
-  },
-
-  buttonTwo: {
-    padding: "0.3rem",
-  },
-};
 
 export default Car;

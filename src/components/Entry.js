@@ -1,23 +1,15 @@
-import "./Entry.css";
 import { format } from "date-fns";
 
 function Entry(props) {
   return (
-    <tr style={styles.entryContainer}>
+    <tr className="text-black h-fit p-[1rem] max-h-[50px] bg-slate-50 m-0">
       <td>{props.model}</td>
-      <td>{props.color}</td>
-      <td>{format(props.entryTime, "yyyy-MM-dd HH:mm:ss")}</td>
-      <td>{format(props.exitTime, "yyyy-MM-dd HH:mm:ss")}</td>
+      <td>{props.sirname}</td>
+      <td>{format(props.entryTime, "PPpp")}</td>
+      <td>{format(props.exitTime, "PPpp")}</td>
       <td>{props.duration}</td>
     </tr>
   );
 }
-
-const styles = {
-  entryContainer: {
-    color: "black",
-    height: "fit-content",
-  },
-};
 
 export default Entry;

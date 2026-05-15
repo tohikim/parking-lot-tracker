@@ -1,7 +1,6 @@
 import Header from "./components/Header.js";
 import ParkingLot from "./components/ParkingLot.jsx";
 import Footer from "./components/Footer.js";
-import "./App.css";
 import { useState } from "react";
 
 function App() {
@@ -9,7 +8,7 @@ function App() {
   const [exitedCars, setExitedCars] = useState([]);
   const [totalEarnings, setTotalEarnings] = useState(0);
   return (
-    <div className="App">
+    <div className="bg-[#FDFBF7] p-[10%] flex flex-col items-center gap-[2rem]">
       <Header
         setParkedCars={setParkedCars}
         parkedCars={parkedCars}
