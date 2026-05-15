@@ -61,7 +61,7 @@ function CarInput(props) {
           type="submit"
           className="cursor-pointer rounded-[10px] border bg-[#7D99AA] hover:bg-[#FFC067] transition-colors text-[whitesmoke] text-base font-bold w-full p-4"
         >
-          ADD CAR
+          CHECK IN CAR
         </button>
       </form>
     </div>

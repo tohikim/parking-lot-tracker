@@ -46,7 +46,7 @@ function Car(props) {
         <p style={styles.p}>{format(props.entryTime, "yyyy-MM-dd HH:mm:ss")}</p>
       </div>
       <button style={styles.buttonTwo} onClick={handleClick}>
-        EXIT
+        CHECK OUT
       </button>
     </div>
   );

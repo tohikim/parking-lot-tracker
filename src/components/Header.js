@@ -9,7 +9,7 @@ export function Header(props) {
   return (
     <div className="text-center p-[2rem] w-full flex flex-col items-center mb-[1.4rem]">
       <h1 className=" text-amber-800 font-serif text-5xl mb-[1.7rem]">
-        VALOT DASHBOARD
+        VALET DASHBOARD
       </h1>
       <div className="flex flex-row gap-[1rem]">
         <CarInput
