@@ -1,10 +1,10 @@
-# 🚗 Parking Lot Tracker
+# 🚗 Valet Dashboard
 
 A real-time React application designed to manage vehicle entries, track durations, and calculate revenue for a parking facility.
 
 ## 🌟 Features
 
-- **Vehicle Entry:** Select a model and color to add a car to the lot.
+- **Vehicle Entry:** Select a model and the owner's sirname to add a car to the lot.
 - **Capacity Control:** Built-in validation prevents adding more than **9 cars** at a time.
 - **Live Tracking:** Every parked car displays its specific entry timestamp.
 - **Automated Billing:** Upon exit, the app automatically calculates the stay duration in seconds.
@@ -49,13 +49,13 @@ To get this project running locally, follow these steps:
 ## 🏗️ Project Structure
 
 - **`App.js`**: The "Source of Truth." It manages the state for `parkedCars`, `exitedCars`, and `totalEarnings`.
-- **`Header.js`**: Handles the form input and prevents the lot from exceeding 9 spots.
+- **`Header.js`**: Handles the form input, prevents the lot from exceeding 6 spots, and displays the `Earnings` summary.
 - **`ParkingLot.js`**: A container that renders the current fleet of cars.
 - **`Car.js`**: The core logic unit. When a car "Exits":
   - It calculates the duration using `differenceInSeconds`.
   - It updates the total earnings by multiplying duration by 2.
   - It moves the car data from the active lot to the exit logs.
-- **`Footer.js`**: Displays the `Entry` log table and the `Earnings` summary.
+- **`Footer.js`**: Displays the `Entry` log table.
 
 ---
 
