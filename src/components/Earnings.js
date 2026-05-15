@@ -1,43 +1,15 @@
 function Earnings(props) {
   return (
-    <div style={styles.earningsBox}>
-      <h5 style={styles.h5}>DAY EARNINGS</h5>
-      <p style={styles.p}>Seconds rate: $2</p>
-      <div style={styles.totalEarnings}>
-        <p style={styles.p}>Today's earnings: $</p>
-        <p style={styles.p}>{props.totalEarnings}</p>
+    <div className="bg-white border border-dotted border-[#7D99AA] rounded-[15px] w-full min-h-[150px] p-[1rem] text-[#7D99AA]">
+      <h5 className="m-0 mb-[1rem] text-xl font-sans">Day Earnings</h5>
+      <p className="text-[1rem] m-0 text-black text-left">Seconds rate: $2</p>
+      <div className="flex flex-row gap-0">
+        <p className="text-[1rem] m-0 text-black text-left">
+          Today's earnings: ${props.totalEarnings}
+        </p>
       </div>
     </div>
   );
 }
-
-const styles = {
-  earningsBox: {
-    backgroundColor: "white",
-    border: "1px dotted #7D99AA",
-    borderRadius: "15px",
-    width: "75%",
-    minHeight: "150px",
-    padding: "1rem",
-    color: "#7D99AA",
-  },
-
-  totalEarnings: {
-    display: "flex",
-    flexDirection: "row",
-    gap: 0,
-  },
-
-  h5: {
-    margin: 0,
-    marginBottom: "1rem",
-    fontSize: "1.5rem",
-  },
-  p: {
-    margin: 0,
-    color: "black",
-    textAlign: "left",
-  },
-};
 
 export default Earnings;

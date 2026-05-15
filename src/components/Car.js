@@ -1,6 +1,5 @@
 import { differenceInSeconds } from "date-fns";
 import { format } from "date-fns";
-import car from "../assets/car-icon.png";
 
 function Car(props) {
   const handleClick = () => {
@@ -33,7 +32,7 @@ function Car(props) {
     });
   };
   return (
-    <div style={styles.carContainer}>
+    <div className="bg-no-repeat bg-contain rounded-[15px] max-h-[130px] max-w-[350px] p-[1rem]">
       <div style={styles.carContent}>
         <p style={styles.p}>Model: </p>
         <p style={styles.p}>{props.model}</p>
@@ -54,16 +53,6 @@ function Car(props) {
 }
 
 const styles = {
-  carContainer: {
-    backgroundImage: `url(${car}`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "contain",
-    borderRadius: "15px",
-    maxHeight: "130px",
-    maxWidth: "350px",
-    padding: "1rem",
-  },
-
   carContent: {
     display: "flex",
     flexDirection: "row",
